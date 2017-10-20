@@ -10,9 +10,27 @@
 </head>
 
 <body>
-<div id="pessoas">
-	<button class="btn btn-primary" onclick="pessoas.criar()">Adicionar</button>
+<div class="container">
+	<div class="jumbotron">
+		<h1 class="display-3">Dinamizações</h1>
+		<p class="lead">Dinamização com lista de objetos pessoa</p>
+		<hr class="my-4">
+		<ul>
+			<li>Ponto chave: Usar indices do array para referencia-los aos elementos</li>
+			<li>Solução: Na criação dos elementos usar o indice do array nos eventos</li>
+			<li>Antes de serializar: Usar metodo recursivo que remove undefined</li>
+			<ul><li>dados.acao.reindexar(qualquerVar)</li></ul>
+		</ul>
+		<div class="row">
+			<div id="pessoas">
+				<div class="form-group">
+					<button class="btn btn-primary" onclick="pessoas.criar()">Adicionar</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+
 </body>
 
 </html>

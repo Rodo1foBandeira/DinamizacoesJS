@@ -1,25 +1,30 @@
 var pessoas = {
 		dataset: [],
 		criar: function () {
-			var idx = dados.acao.incluir(this.dataset, {Nome: ''})
+			var idx = dados.acao.incluir(this.dataset, {Nome: '', SobreNome:''});
             var idElm = 'pessoas' + idx;
-            var fieldset = $('<fieldset>', {
+            var div = $('<div>', {
                 id: idElm,
-                class: '',
+                class: 'form-group',
             });
 			
-			var input = $('<input>', {
+			var nome = $('<input>', {
                 onchange: "dados.acao.alterar(pessoas.dataset,"+idx+', "Nome", this.value)'
             });
 
+            var sobreNome = $('<input>', {
+                onchange: "dados.acao.alterar(pessoas.dataset,"+idx+', "SobreNome", this.value)'
+            });
+
             var btnExcluir = $('<button>', {
-                class: 'btn btn-waring',
+                class: 'btn btn-waring btn-sm',
                 onclick: "pessoas.remover("+idx+', $(this).parent())', // $(this).parent() = FieldSet
                 html: 'Excluir'
             });
 			
-			$(fieldset).append(input).append(btnExcluir);
-            $('div#pessoas').append(fieldset);			
+			$(div).append('<label>Nome: </label>').append(nome).append('<label>Sobre Nome: </label>').append(sobreNome).append(btnExcluir);
+            $(div).children().css('margin-left','10pt');
+            $('div#pessoas').append(div);
         },
 		
 		remover: function(idx, element){
