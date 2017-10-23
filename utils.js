@@ -13,7 +13,7 @@ var dados = {
             dataset[idx][property] = value;
         },
 
-		// Importante: reindexar antes de serializar. Pois dara pau no backend
+		// Importante reindexar antes de serializar. Pois dara pau no backend
         reindexar: function (varQlqrTipo) { // Remove recursivamente todos Undefined
             var varAux = varQlqrTipo;
             if (Object.prototype.toString.call(varAux) === '[object Array]') {

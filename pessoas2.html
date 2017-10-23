@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="dataset.js"></script>
+<script src="pessoa2.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+<title>Pessoas</title>
+</head>
+
+<body>
+<div class="container">
+	<div class="jumbotron">
+		<h1 class="display-3">Dinamizações</h1>
+		<p class="lead">Dinamização com lista de objetos pessoa</p>
+		<hr class="my-4">
+		<ul>
+			<li>Ponto chave: Usar indices do array para referencia-los aos elementos</li>
+			<li>Solução: Na criação dos elementos usar o indice do array nos eventos</li>
+			<li>Antes de serializar: Usar metodo recursivo que remove undefined</li>
+			<ul><li>reindexar(qualquerVar)</li></ul>
+		</ul>
+		<div class="row">
+			<div id="pessoas">
+				<div class="form-group">
+					<button class="btn btn-primary" onclick="pessoas.criar()">Adicionar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+</html>

@@ -18,7 +18,7 @@ var pessoas = {
 
             var btnExcluir = $('<button>', {
                 class: 'btn btn-waring btn-sm',
-                onclick: "pessoas.remover("+idx+', $(this).parent())', // $(this).parent() = FieldSet
+                onclick: "pessoas.remover("+idx+', $(this).parent())',
                 html: 'Excluir'
             });
 			
