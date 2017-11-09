@@ -37,7 +37,7 @@ function reindexar (varQlqrTipo) { // Remove recursivamente todos Undefined
     }
     Object.keys(varAux).map(function (key, idx) {
         if (varAux[key] != undefined && (Object.prototype.toString.call(varAux[key]) === '[object Object]' || Object.prototype.toString.call(varAux[key]) === '[object Array]'))
-            varAux[key] = dados.acao.reindexar(varAux[key]);
+            varAux[key] = reindexar(varAux[key]);
     })
     return varAux;
 }
